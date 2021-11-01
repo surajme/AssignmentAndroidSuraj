@@ -1,11 +1,10 @@
-package com.assignment.android.data.api
+package com.assignment.android.utils
 
-import com.assignment.android.utils.Resource
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import retrofit2.HttpException
 
-interface SafeApiCall {
+interface ApiCall {
     suspend fun <T> safeApiCall(
         apiCall: suspend () -> T
     ): Resource<T> {

@@ -25,7 +25,8 @@
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/teal_700"
                 android:minHeight="?actionBarSize"
                 android:padding="@dimen/appbar_padding"
                 android:text="@string/app_name"
@@ -36,7 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:tabMode="scrollable"
-                android:background="@color/purple_500" />
+                android:background="@color/teal_700" />
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.viewpager2.widget.ViewPager2
@@ -53,6 +54,15 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:visibility="@{viewModel.showProgress ? View.VISIBLE : View.GONE}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:layout_marginLeft="120dp"
+            android:text="@string/loading"
+            android:visibility="@{viewModel.showProgress ? View.VISIBLE : View.GONE}"/>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>
