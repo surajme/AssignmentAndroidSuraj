@@ -1,4 +1,4 @@
-# AssignmentAndroidSuraj
+# Assignment 
 
 This repository contains a pictures listing application using API that implements MVVM architecture using Kotlin, ViewModel, LiveData, retrofit and etc.
 
