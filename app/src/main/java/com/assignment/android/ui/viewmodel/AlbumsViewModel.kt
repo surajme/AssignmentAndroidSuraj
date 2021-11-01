@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.assignment.android.data.api.ApiHelper
 import com.assignment.android.utils.Resource
-import com.assignment.android.data.model.AlbumPictures
+import com.assignment.android.data.model.Images
 import com.assignment.android.data.model.Albums
 import kotlinx.coroutines.launch
 
@@ -16,8 +16,8 @@ class AlbumsViewModel(private val apiHelper: ApiHelper) : ViewModel() {
     val albumsList: LiveData<Albums>
         get() = _albumsList
 
-    private val _albumsPictures = MutableLiveData<AlbumPictures>()
-    val albumsPictures: LiveData<AlbumPictures>
+    private val _albumsPictures = MutableLiveData<Images>()
+    val albumsPictures: LiveData<Images>
         get() = _albumsPictures
 
     val showProgress = MutableLiveData<Boolean>()
@@ -53,7 +53,7 @@ class AlbumsViewModel(private val apiHelper: ApiHelper) : ViewModel() {
                 when (it) {
                     is Resource.Success -> {
                         showProgress.value = false
-                        _albumsPictures.postValue(it.value ?: AlbumPictures())
+                        _albumsPictures.postValue(it.value ?: Images())
                     }
                     is Resource.Failure -> {
                         showProgress.value = false

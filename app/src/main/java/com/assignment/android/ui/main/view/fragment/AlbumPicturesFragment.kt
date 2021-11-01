@@ -9,7 +9,7 @@ import androidx.fragment.app.viewModels
 import com.assignment.android.ui.main.adapter.AlbumsPicturesAdapter
 import com.assignment.android.data.api.ApiHelperImpl
 import com.assignment.android.data.api.RetrofitBuilder
-import com.assignment.android.data.model.AlbumPictures
+import com.assignment.android.data.model.Images
 import com.assignment.android.data.model.AlbumsItem
 import com.assignment.android.databinding.FragmentAlbumPicturesBinding
 import com.assignment.android.ui.viewmodel.AlbumsViewModel
@@ -58,7 +58,7 @@ class AlbumPicturesFragment(private val albumsItem: AlbumsItem) : Fragment() {
         )
     }
 
-    private fun setUpAdapter(albumPictures: AlbumPictures) {
+    private fun setUpAdapter(images: Images) {
             rvPictures.recycledViewPool.clear()
             adapter = AlbumsPicturesAdapter()
             binding.rvPictures.adapter = adapter

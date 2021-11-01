@@ -1,6 +1,6 @@
 package com.assignment.android.data.model
 
-data class AlbumPicturesItem(
+data class ImagesItems(
     val albumId: Int,
     val id: Int,
     val thumbnailUrl: String,
