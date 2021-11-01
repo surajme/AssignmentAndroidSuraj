@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AndroidAssignment</string>
+    <string name="error_msg">Something went wrong</string>
+    <string name="title_activity_main">MainActivity</string>
+</resources>
